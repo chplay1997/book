@@ -1,0 +1,41 @@
+image: node:16
+
+pipelines:
+  branches:
+    master:
+        - step:
+            caches:
+              - node
+            script:
+              - npm install --legacy-peer-deps
+              - npm run test:ci
+    development:
+      - step:
+          caches:
+            - node
+          script:
+            - npm install --legacy-peer-deps
+            - npm run test:ci
+    staging:
+      - step:
+          caches:
+            - node
+          script:
+            - npm install --legacy-peer-deps
+            - npm run test:ci
+    beta:
+        - step:
+            caches:
+              - node
+            script:
+              - npm install --legacy-peer-deps
+              # - npm run lint
+              - npm run test:ci
+  pull-requests:
+    '**': #this runs as default for any branch not elsewhere defined
+      - step:
+          caches:
+            - node
+          script:
+            - npm install --legacy-peer-deps
+            - npm run test:ci

@@ -1,0 +1,5 @@
+it(`[COMPONENT] should be rendered correctly without any problem`, () => {
+  const testRenderer = create(<[COMPONENT] [PROPS] />)
+  expect(testRenderer.toJSON()).toMatchSnapshot()
+})
+

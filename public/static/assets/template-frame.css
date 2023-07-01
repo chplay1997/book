@@ -1,0 +1,31 @@
+html {
+	background: #f0f2f5;
+}
+@media (min-width: 400px) {
+	html {
+		padding: 24px;
+	}
+}
+body {
+	margin: 0;
+	overflow-x: hidden;
+	background: #fff;
+	border-radius: 2px;
+}
+body::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+	background: rgba(0, 0, 0, .16);
+}
+body::-webkit-scrollbar-thumb {
+	background: rgba(0, 0, 0, .16);
+	border-radius: 10px;
+	visibility: hidden;
+}
+body::-webkit-scrollbar-track {
+	box-shadow: rgba(217, 217, 217, .4) 0 0 3px inset;
+	background: #fafafa;
+}
+body:hover::-webkit-scrollbar-thumb {
+	visibility: visible;
+}

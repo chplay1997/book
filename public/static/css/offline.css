@@ -1,0 +1,20 @@
+.offline {
+	padding: 80px 100px;
+	padding-left: 150px;
+	color: #6c6c6c;
+	max-width: 850px;
+}
+.offline__title {
+	display: flex;
+	align-items: center;
+	font-size: 20px;
+	margin: 50px 0;
+}
+.offline__title-icon {
+	width: 40px;
+	margin-right: 20px;
+}
+.offline__content {
+	font-size: 16px;
+	line-height: 32px;
+}

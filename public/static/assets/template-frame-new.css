@@ -1,0 +1,9 @@
+body {
+	margin: 0;
+}
+[data-pf-placeholder="true"] {
+    display: none !important;
+}
+[data-pf-type="Layout"]{
+    height: auto;
+}

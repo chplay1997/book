@@ -1,0 +1,20 @@
+import { create } from 'react-test-renderer'
+import { render } from '@testing-library/react'
+import { renderHook } from '@testing-library/react-hooks'
+import { createElementStore } from '@/stores/element/fns'
+import { [FUNCTION_TO_TEST] } from '[PATH]'
+import useElementStore from '@/stores/element'
+
+
+let store
+
+const elementStore = createElementStore({ type: '[ELEMENT_TYPE]' })
+const { result } = renderHook(() => useElementStore(elementStore))
+
+beforeEach(() => {
+  store = result.current
+})
+
+afterEach(() => {
+  store = null
+})
